@@ -8,7 +8,7 @@ peut traverser la Pregel qu’en passant sur les ponts.
 
 ![Les ponts de Königsberg](./source/eduscolPlan.png)
 
-Depuis lors, les graphes sont devenus un outil fondamental en mathématiques et en informatique pour modéliser des relations entre des objets. Les graphes sont des structures de données essentielles en informatique, permettant de modéliser des relations entre des éléments. Que ce soit pour représenter un réseau routier, un réseau électrique, Internet ou des relations sociales.
+Depuis, les graphes sont des structures de données essentielles en informatique, permettant de modéliser des relations entre des éléments. Que ce soit pour représenter un réseau routier, un réseau électrique, Internet, des relations sociales, etc...
 
 ## 2 - Vocabulaire général
 
@@ -24,6 +24,8 @@ Par exemple dans la figure 1, le graphe G = (S, A) avec S = {Alice, Bob, Charlie
 * Une **arête** représente la relation entre deux sommets, souvent désignée par une ligne ou une flèche reliant deux cercles.
 * **L'ordre** du graphe est le nombre de sommets qu'il contient.
 * La **taille** du graphe est le nombre d'arêtes qu'il contient.
+
+> **Remarque** : Un graphes peut contenir des **arêtes multiples** et des **boucles**. Une arête multiple est une arête qui relie les mêmes sommets que d'autres arêtes. Une boucle est une arête qui relie un sommet à lui-même. Si il n'y a aucun de ces deux cas, on dit que le graphe est **simple**. Nous travaillerons uniquement avec des graphes simples.
 
 Il existe deux types de graphes : les graphes orientés et les graphes non orientés. Nous allons les détailler ci-dessous.
 
@@ -47,7 +49,15 @@ Question :
 * Est-ce que les couples de sommets suivants sont adjacents ou non :
   * Graphe 1 : (A, B), (A, D), (C, E)
   * Graphe 2 : (A, C), (B, D), (C, D)
-* Pour les sommets C, donner leurs degrés et leurs voisins.
+* Recopiez et complétez le tableau des degrés des sommets pour chaque graphe:
+
+| Sommet | Degré Graphe 1 | Degré Graphe 2 |
+| :----: | :------------: | :------------: |
+|   A    |                |                |
+|   B    |                |                |
+|   C    |                |                |
+|   D    |                |                |
+|   E    |                |Pas de sommet E |
 
 * Une **chaine** est une suite de sommets tels que chaque sommet est adjacent au suivant. Par exemple, le graphe 1 de la figure 2, une chaîne possible est A - E - D - B - C ou encore C - A - B.
 * Un **cycle** est une chaîne qui commence et se termine au même sommet.
@@ -65,21 +75,32 @@ Les graphes orientés ont un fonctionnement différent : ce sont des graphes dan
 
 Plusieurs notions changent dans le vocabulaire des graphes orientés :
 
-* On ne parle plus de sommets adjacents, mais de **successeurs** et de **prédécesseurs**. Pour un graphe orienté, un couple de sommets (u, v) est un **arc allant de u vers v**, v est donc un successeur de u et que u est un prédécesseur de v. 
-* On ne parle plus de chaine, mais de **chemin** dans un graphe orienté et la **distance** entre deux sommets devient donc le chemin le plus court qui les relies. 
+* On ne parle plus de sommets adjacents, mais de **successeurs** et de **prédécesseurs**. Pour un graphe orienté, un couple de sommets (u, v) est un **arc allant de u vers v**, v est donc un successeur de u et que u est un prédécesseur de v. Un sommet peut être à la fois prédécesseur et successeur d’un autre sommet. Dans notre exemple, 
+Bob est un prédécesseur ET un successeur d’Alice.
+* On ne parle plus de chaine, mais de **chemin** dans un graphe orienté et la **distance** entre deux sommets devient donc le chemin le plus court qui les relies.
+
+> **Remarque** : La notion de voisin ne change pas, le nombre de voisins dans un graphe orienté correspond au nombre de voisins quand on transforme tout les arcs en arêtes, on peut également définir le **degré entrant** (nombre de prédécesseurs) et le **degré sortant** (nombre de successeurs) d'un sommet.
 
 > ![Représentation d’un graphe orientés](./source/grapheO.png)
 >
 > **Figure 3**: Graphe de suivi dans un réseau social.
 
 Question :
-* Dans notre réseau social, Qui sont les personnes suivies par Bob ?
-* Qui sont les personnes qui suivent Alice ?
+* Dans notre réseau social, Qui sont les personnes suivies par Bob ? Que sont ses personnes pour Bob ?
+* Qui sont les personnes qui suivent Alice ? Que sont ses personnes pour Alice ?
 * Qui est la personne la plus suivie ?
 * Quelle est la distance entre Eve et Alice ? 
 * Existe-t-il un chemin entre Alice et Eve ? 
 * Existe-t-il un cycle dans ce graphe ?
+* Recopiez et complétez le tableau des degrés entrants et sortants des sommets :
 
+| Sommet | Degré entrant | Degré sortant | Degré |
+| :----: | :------------: | :------------: | :----: |
+|   Alice   |                |                |        |
+|   Bob    |                |                |        |
+|   Charlie    |                |                |        |
+|   Diana    |                |                |        |
+|   Eve    |                |                |        |
 ## 5 - Implémentations
 
 Maintenant nous savons ce qu'est un graphe et son vocabulaire autour. Mais comment pouvons nous les représenter en python ? Il existe deux principales façons de représenter un graphe : la matrice d'adjacence et les listes d'ajacence.
@@ -109,6 +130,18 @@ matrice_adjacence = [
     [0, 0, 0, 1, 0]   # Diana
 ]
 ```
+
+Question :
+* A quoi correspond la valeur de la case matrice_adjacence[1][2] ?
+* Pourquoi la diagonale de la matrice est-elle composée uniquement de 0 ?
+
+> ![GrapheExemple](./source/grapheMatriceAdj.png)
+>
+> **Figure 4**: Graphe non orienté.
+
+Question :
+* Construire la matrice d'adjacence du graphe non orienté.
+* La matrice d'adjacence d'un graphe non orienté possède une propriété intéressante : regardez votre matrice sous et au dessus de la diagonale (de la case en haut à gauche à la case en bas à droite). Que remarquez-vous ? Pourquoi ?
 
 ### Listes d'ajacence
 
