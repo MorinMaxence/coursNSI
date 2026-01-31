@@ -143,8 +143,61 @@ Question :
 * Construire la matrice d'adjacence du graphe non orienté.
 * La matrice d'adjacence d'un graphe non orienté possède une propriété intéressante : regardez votre matrice sous et au dessus de la diagonale (de la case en haut à gauche à la case en bas à droite). Que remarquez-vous ? Pourquoi ?
 
-### Listes d'ajacence
+> * Implémenter une fonction **verifier_oriente(matrice)** qui prend une matrice d'adjacence d'un graphe et qui renvoie True si le graphe est orienté et False sinon.
+>```python
+> def verif_oriente(matrice):
+>     """Verifie si un graphe est orienté à partir de sa matrice d'adjacence."""
+>     # Votre code ici
+> ```
 
-Une autre façon de représenter un graphe est d'utiliser des listes d'ajacence. Pour chaque sommet, on crée une liste qui contient tous les sommets adjacents (ou suivis dans le cas d'un graphe orienté).
+* Dessinez le graphe correspondant à la matrice d'adjacence suivante, Les sommets sont numérotés de 1 à 5:
+```python
+matrice_adjacence = [
+    [0, 1, 0, 1, 0],  
+    [1, 0, 0, 0, 1],  
+    [1, 0, 0, 1, 0],  
+    [0, 0, 1, 0, 0],  
+    [1, 1, 1, 1, 0]   
+]
+```
+
+### Liste d'adjacence
+
+Une autre façon de représenter un graphe est d'utiliser des listes d'adjacence. Pour chaque sommet, on crée une liste qui contient tous les sommets adjacents (ou suivis dans le cas d'un graphe orienté). Cette représentation peut paraitre clair car on peut directement voir les relations entre les sommets et leur noms. Pour cela on peut utiliser un dictionnaire en python.
+
+```python
+graphe = {
+    "Alice": [],
+    "Bob": ["Alice", "Charlie", "Diana"],
+    "Charlie": ["Alice", "Eve"],
+    "Eve": ["Charlie"],
+    "Diana": ["Eve"]
+}
+```
+
+Question :
+* Que représente la liste associée à la clé "Bob" dans le dictionnaire ?
+* Construire la liste d'adjacence du graphe non orienté de la figure 4.
+* Dessinez le graphe correspondant à la liste d'adjacence du graphe orienté suivant:
+```python
+graphe = {
+    "A": ["B", "C", "E"],
+    "B": ["A", "D", "E"],
+    "C": ["A", "D"],
+    "D": ["C"],
+    "E": ["A", "B", "C", "D"]
+}
+```
+
+
+> * Implémenter une fonction **matrice_vers_dico(matrice)** qui prend une matrice d'adjacence d'un graphe et qui renvoie un dictionnaire d'adjacence. Le nom des sommets sera leur indice dans la matrice (0, 1, 2, ...).
+>```python
+> def matrice_vers_dico(matrice):
+>     """Transforme une matrice d'adjacence en dictionnaire d'adjacence."""
+>     dico_adjacence = {}
+>     # Votre code ici
+>     return dico_adjacence
+> ```
+
 
 
