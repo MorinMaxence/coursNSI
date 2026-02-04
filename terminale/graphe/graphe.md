@@ -13,13 +13,12 @@ Depuis, les graphes sont des structures de données essentielles en informatique
 
 > ![Représentation d’un graphe](./source/graphe.png)
 >
-> **Figure 1** : exemple de représentation d’un graphe d’amis, d’ordre 5 (un sommet = une personne) et de taille 6 (une arête = une relation d’amitié entre deux personnes).
+> **Figure 1** : exemple de représentation d’un graphe d’amis, d’ordre 5 (un sommet = une personne) et les arêtes qui représentent les amitiés.
 
-* Un **graphe** est composé d’un ensemble de **sommets** et d’un ensemble d’**arêtes** (ou **arcs**). Il s’agit d’une représentation d’un ensemble de relations entre des entités. On le note G = (S, A), où S est un ensemble fini de sommets et A un ensemble fini d’arêtes représentées par des couples de sommets. Par exemple, dans la figure 1, le graphe G = (S, A) avec S = {Alice, Bob, Charlie, Diana, Eve} et A = {(Alice, Bob), (Alice, Charlie), (Bob, David), (Charlie, David), (David, Eve), (Bob, Eve)}.
+* Un **graphe** est composé d’un ensemble de **sommets** et d’un ensemble d’**arêtes** (ou d'**arcs**). Il s’agit d’une représentation d’un ensemble de relations entre des entités. On le note G = (S, A), où S est un ensemble fini de sommets et A un ensemble fini d’arêtes représentées par des couples de sommets. Par exemple, dans la figure 1, le graphe G = (S, A) avec S = {Alice, Bob, Charlie, Diana, Eve} et A = {(Alice, Bob), (Alice, Charlie), (Bob, David), (Charlie, David), (David, Eve), (Bob, Eve)}.
 * Un **sommet** représente une entité, souvent désignée par un cercle dans les représentations graphiques.
-* Une **arête** représente la relation entre deux sommets, souvent désignée par une ligne ou une flèche reliant deux cercles.
+* Une **arête** ou un **arc** représente la relation entre deux sommets, souvent désignée par une ligne ou une flèche reliant deux cercles.
 * **L'ordre** du graphe est le nombre de sommets qu'il contient.
-* La **taille** du graphe est le nombre d'arêtes qu'il contient.
 
 > **Remarque** : un graphe peut contenir des **arêtes multiples** et des **boucles**. Une arête multiple est une arête qui relie les mêmes sommets que d’autres arêtes. Une boucle est une arête qui relie un sommet à lui-même. S’il n’y a aucun de ces deux cas, on dit que le graphe est **simple**. Nous travaillerons uniquement avec des graphes simples.
 
@@ -41,7 +40,7 @@ Par exemple, le degré de Bob est 3.
 > **Figure 2**: Graphe non orientés
 
 Question : 
-* Pour chaque graphe, donner son ordre et sa taille.
+* Pour chaque graphe, donner son ordre.
 * Est-ce que les couples de sommets suivants sont adjacents ? :
   * Graphe 1 : (A, B), (A, D), (C, E)
   * Graphe 2 : (A, C), (B, D), (C, D)
