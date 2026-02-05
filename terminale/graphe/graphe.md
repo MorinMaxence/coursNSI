@@ -128,6 +128,11 @@ matrice_adjacence = [
 
 Question :
 * A quoi correspond la valeur de la case matrice_adjacence[1][2] ?
+* Redessinez le graphe avec les modifications suivantes :
+    * matrice_adjacence[1][3] = 1
+    * matrice_adjacence[2][0] = 0
+    * matrice_adjacence[0][2] = 1
+    * matrice_adjacence[2][0] = 0
 * Pourquoi la diagonale de la matrice est-elle composée uniquement de 0 ?
 
 > ![GrapheExemple](./source/grapheMatriceAdj.png)
@@ -141,7 +146,16 @@ Question :
 > * Implémenter une fonction **verifier_oriente(matrice)** qui prend une matrice d'adjacence d'un graphe et qui renvoie True si le graphe est orienté et False sinon.
 >```python
 > def verif_oriente(matrice):
->     """Verifie si un graphe est orienté à partir de sa matrice d'adjacence."""
+>     """Verifie si un graphe est orienté à partir de sa matrice d'adjacence.
+>        Param:
+>           matrice : list(list(int)) -> Une liste de liste de taille même longueur et largeur 
+>           contenant des 0 (pas d'arc) ou des 1 (présence d'arc)
+>        Test:
+>           >>> verif_oriente(matrice_adjacence)
+>           False
+>           >>> verif_oriente([[0,1,0],[1,0,0],[0,0,0]])
+>           True
+>     """
 >     # Votre code ici
 > ```
 
