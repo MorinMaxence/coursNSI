@@ -150,11 +150,6 @@ Question :
 >        Param:
 >           matrice : list(list(int)) -> Une liste de liste de taille même longueur et largeur 
 >           contenant des 0 (pas d'arc) ou des 1 (présence d'arc)
->        Test:
->           >>> verif_oriente(matrice_adjacence)
->           False
->           >>> verif_oriente([[0,1,0],[1,0,0],[0,0,0]])
->           True
 >     """
 >     # Votre code ici
 > ```
@@ -202,7 +197,11 @@ graphe = {
 > * Implémenter une fonction **matrice_vers_dico(matrice)** qui prend une matrice d'adjacence d'un graphe et qui renvoie un dictionnaire d'adjacence. Le nom des sommets sera leur indice dans la matrice (0, 1, 2, ...).
 >```python
 > def matrice_vers_dico(matrice):
->     """Transforme une matrice d'adjacence en dictionnaire d'adjacence."""
+>     """Transforme une matrice d'adjacence en dictionnaire d'adjacence.
+>        Param:
+>           matrice : list(list(int)) -> Une liste de liste de taille même longueur et largeur 
+>           contenant des 0 (pas d'arc) ou des 1 (présence d'arc)
+>     """
 >     dico_adjacence = {}
 >     # Votre code ici
 >     return dico_adjacence
