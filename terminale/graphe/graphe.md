@@ -167,7 +167,10 @@ matrice_adjacence = [
 
 ### Liste d'adjacence
 
-Une autre façon de représenter un graphe est d'utiliser des listes d'adjacence. Pour chaque sommet, on crée une liste qui contient tous les sommets adjacents (ou suivis dans le cas d'un graphe orienté). Cette représentation peut paraître clair car on peut directement voir les relations entre les sommets et leurs noms. Pour cela on peut utiliser un dictionnaire en python.
+Une autre façon de représenter un graphe est d'utiliser des listes d'adjacence. 
+Pour chaque sommet, on crée une liste qui contient tous ses sommets adjacents (ou ses successeurs dans le cas d'un graphe orienté). 
+Cette représentation peut paraître plus clair car on peut directement voir les relations entre les sommets et leurs noms. 
+Pour cela on peut utiliser un dictionnaire qui va associer un sommet (clé) à sa liste de sommets adjacents (valeur) en python.
 
 ```python
 graphe = {
@@ -194,17 +197,17 @@ graphe = {
 ```
 
 
-> * Implémenter une fonction **matrice_vers_dico(matrice)** qui prend une matrice d'adjacence d'un graphe et qui renvoie un dictionnaire d'adjacence. Le nom des sommets sera leur indice dans la matrice (0, 1, 2, ...).
+> * Implémenter une fonction **matrice_vers_liste(matrice)** qui prend une matrice d'adjacence d'un graphe et qui renvoie une liste d'adjacence sous forme de dictionnaire. Le nom des sommets sera leur indice dans la matrice (0, 1, 2, ...).
 >```python
-> def matrice_vers_dico(matrice):
->     """Transforme une matrice d'adjacence en dictionnaire d'adjacence.
+> def matrice_vers_liste(matrice):
+>     """Transforme une matrice d'adjacence en liste d'adjacence.
 >        Param:
 >           matrice : list(list(int)) -> Une liste de liste de taille même longueur et largeur 
 >           contenant des 0 (pas d'arc) ou des 1 (présence d'arc)
 >     """
->     dico_adjacence = {}
+>     liste_adjacence = {}
 >     # Votre code ici
->     return dico_adjacence
+>     return liste_adjacence
 > ```
 
 
