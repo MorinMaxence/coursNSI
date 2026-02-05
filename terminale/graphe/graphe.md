@@ -168,9 +168,9 @@ matrice_adjacence = [
 ### Liste d'adjacence
 
 Une autre façon de représenter un graphe est d'utiliser des listes d'adjacence. 
-Pour chaque sommet, on crée une liste qui contient tous ses sommets adjacents (ou ses successeurs dans le cas d'un graphe orienté). 
+Pour chaque sommet, on crée une liste qui contient tous ses successeurs.
 Cette représentation peut paraître plus clair car on peut directement voir les relations entre les sommets et leurs noms. 
-Pour cela on peut utiliser un dictionnaire qui va associer un sommet (clé) à sa liste de sommets adjacents (valeur) en python.
+Pour cela on peut utiliser un dictionnaire qui va associer un sommet (clé) à sa liste de successeurs (valeur) en python.
 
 ```python
 graphe = {
