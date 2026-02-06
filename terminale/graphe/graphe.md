@@ -132,7 +132,7 @@ Question :
     * matrice_adjacence[1][3] = 1
     * matrice_adjacence[2][0] = 0
     * matrice_adjacence[0][2] = 1
-    * matrice_adjacence[2][0] = 0
+    * matrice_adjacence[1][0] = 0
 * Pourquoi la diagonale de la matrice est-elle composée uniquement de 0 ?
 
 > ![GrapheExemple](./source/grapheMatriceAdj.png)
