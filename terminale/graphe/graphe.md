@@ -15,7 +15,7 @@ Depuis, les graphes sont des structures de données essentielles en informatique
 >
 > **Figure 1** : exemple de représentation d’un graphe d’amis, d’ordre 5 (un sommet = une personne) et les arêtes qui représentent les amitiés.
 
-* Un **graphe** est composé d’un ensemble de **sommets** et d’un ensemble d’**arêtes** (ou d'**arcs**). Il s’agit d’une représentation d’un ensemble de relations entre des entités. On le note G = (S, A), où S est un ensemble fini de sommets et A un ensemble fini d’arêtes représentées par des couples de sommets. Par exemple, dans la figure 1, le graphe G = (S, A) avec S = {Alice, Bob, Charlie, Diana, Eve} et A = {(Alice, Bob), (Alice, Charlie), (Bob, David), (Charlie, David), (David, Eve), (Bob, Eve)}.
+* Un **graphe** est composé d’un ensemble de **sommets** et d’un ensemble d’**arêtes** (ou d'**arcs**). Il s’agit d’une représentation d’un ensemble de relations entre des entités. On le note G = (S, A), où S est un ensemble fini de sommets et A un ensemble fini d’arêtes représentées par des couples de sommets. Par exemple, dans la figure 1, le graphe G = (S, A) avec S = {Alice, Bob, Charlie, Diana, Eve} et A = {(Alice, Bob), (Alice, Charlie), (Bob, Diana), (Charlie, Diana), (Diana, Eve), (Bob, Eve)}.
 * Un **sommet** représente une entité, souvent désignée par un cercle dans les représentations graphiques.
 * Une **arête** ou un **arc** représente la relation entre deux sommets, souvent désignée par une ligne ou une flèche reliant deux cercles.
 * **L'ordre** du graphe est le nombre de sommets qu'il contient.
