@@ -83,7 +83,7 @@ Bob est un prédécesseur **ET** un successeur d’Alice.
 Question :
 * Dans notre réseau social, qui sont les personnes suivies par Bob ? Que sont ces personnes pour Bob ?
 * Qui sont les personnes qui suivent Alice ? Que sont ces personnes pour Alice ?
-* Qui sont les personne les plus suivies ?
+* Qui sont les personnes les plus suivies ?
 * Quelle est la distance entre Eve et Alice ? 
 * Existe-t-il un chemin de Alice vers Eve ? 
 * Existe-t-il un circuit dans ce graphe ?
