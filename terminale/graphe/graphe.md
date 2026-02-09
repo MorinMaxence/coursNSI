@@ -74,7 +74,7 @@ Plusieurs notions changent dans le vocabulaire des graphes orientés :
 Bob est un prédécesseur **ET** un successeur d’Alice.
 * On ne parle plus de chaîne, mais de **chemin** dans un graphe orienté et la **distance** entre deux sommets devient donc le chemin le plus court qui les relie. Egalement, un cycle dans un graphe orienté est appelé un **circuit** et correspond à un chemin qui commence et se termine au même sommet.
 
-> **Remarque** : La notion de voisin ne change pas : le nombre de voisins dans un graphe orienté correspond au nombre de voisins obtenu lorsque l’on transforme tous les arcs en arêtes. On peut également définir le **degré entrant** (nombre de prédécesseurs) et le **degré sortant** (nombre de successeurs) d’un sommet.
+> **Remarque** : On peut également définir le **degré entrant** (nombre de prédécesseurs) et le **degré sortant** (nombre de successeurs) d’un sommet. Le **degré** d'un sommet dans un graphe orienté est la somme de son degré entrant et de son degré sortant.
 
 > ![Représentation d’un graphe orientés](./source/grapheO.png)
 >
